@@ -7,6 +7,14 @@ public class Main
     printNTimes("hello", 5);
     printNums();
 
+    Scanner sc = new Scanner(System.in);
+    int num;
+    System.out.println("how many rows of numbers do you want?");
+    num = sc.nextInt();
+    uprightNumberTriangle(num);
+
+    starTree();
+
   }
 
   public static void printNTimes(String word, int N)
@@ -24,12 +32,11 @@ public class Main
 
   public static void printNums()
   {
-    for (int a = 10; a > 0; a--)
+    for (int rowNum = 10; rowNum >= 1; rowNum--)
     {
-      String output = "";
-      for (int b = a; b > 0; b--)
+      for (int count = 1; count <= rowNum; count++)
       {
-        System.out.print(output);
+        System.out.print(rowNum + " ");
       }
       System.out.println();
     }
@@ -37,12 +44,26 @@ public class Main
 
   public static void uprightNumberTriangle(int N)
   {
-    // code solution here
+    for (int val = 1; val <= N; val++)
+    {
+      for (int number = 1; number <= val; number++)
+      {
+        System.out.print(number + " ");
+      }
+      System.out.println();
+    }
   }
 
   public static void starTree()
   {
-    // code solution here
+    for (int num = 9; num >= 1; num--)
+    {
+      for (int number = 1; number <= num; number++)
+      {
+        System.out.print("* ");
+      }
+      System.out.println();
+    }
   }
 
   public static void multTable()
